@@ -6,7 +6,6 @@
   "scripts": {
     "dev": "ts-node-dev --quiet src/main.ts",
     "test": "NODE_ENV=test jest",
-    "test:unit": "NODE_ENV=test jest",
     "lint": "eslint --ignore-path .gitignore . --ext .js,.ts",
     "lint:fix": "npm run lint -- --fix",
     "build": "rm -rf dist && tsc -p tsconfig.prod.json",
@@ -17,8 +16,7 @@
   },
   "keywords": [
     "typescript",
-    "library",
-    "skeleton"
+    "path-aliases"
   ],
   "author": "alberthernandezdev@gmail.com",
   "engines": {

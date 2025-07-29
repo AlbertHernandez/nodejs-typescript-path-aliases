@@ -1,71 +1,39 @@
-<h1 align="center">Typescript Playground</h3>
+# 🐢 Node TypeScript Path Aliases
 
-<p align="center">
-  Playground for when I need to run Typescript code
-</p>
+A complete example of how to configure **TypeScript path aliases** in a Node.js project. This setup includes full support for path aliases in development, testing and production builds.
 
-<p align="center">
-    <a href="https://github.com/AlbertHernandez/ts-playground/actions/workflows/nodejs.yml?branch=main"><img src="https://github.com/AlbertHernandez/ts-playground/actions/workflows/nodejs.yml/badge.svg?branch=main" alt="nodejs"/></a>
-</p>
+TypeScript path aliases are configured in a single place: the `tsconfig.json` file. This central configuration simplifies maintenance and avoids duplication across environments, ensuring that your imports remain consistent and easy to update as your project grows.
 
-## Table of Contents
+---
 
-* [Preparing environment to contribute](#preparing-environment)
-* [Playground](#playground)
-* [Building](#building)
-* [Testing](#testing)
-* [Linting](#linting)
-* [Contributing](#contributing)
+## ⚡️ Getting Started
 
-## Preparing environment to contribute
-
-This library has been designed to work with node v16 and npm 8. In order to configure your local environment you can run:
+### 1. 📦 Install dependencies
 
 ```bash
-nvm install 16.0.0
-nvm use
-npm install npm@8.3.0 -g
 npm install
-```
+````
 
-## Playground
-
-This library offers a playground where we can play with the functions that we are developing
+### 🏃‍♂️ 2. Run the app in development mode
 
 ```bash
-npm run playground
+npm run dev
 ```
 
-In case you wan
-
-## Building
+### 🛠 3. Build for production
 
 ```bash
 npm run build
 ```
 
-## Testing
+### 4. 🚀 Start production build
 
-### Jest with Testing Library
+```bash
+npm run start
+```
+
+### 5. 🧪 Run tests
 
 ```bash
 npm run test
 ```
-
-## Linting
-
-Run the linter
-
-```bash
-npm run lint
-```
-
-Fix lint issues automatically
-
-```bash
-npm run lint:fix
-```
-
-## Contributing
-
-Contributions welcome! See the [Contributing Guide](https://github.com/AlbertHernandez/ts-playground/blob/main/CONTRIBUTING.md).
