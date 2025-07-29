@@ -5,8 +5,10 @@
     "target": "es6",
     "noImplicitAny": true,
     "moduleResolution": "node",
+    "resolveJsonModule": true,
     "strict": true,
-    "outDir": "./dist"
+    "outDir": "./dist",
+    "baseUrl": "."
   },
   "exclude": ["node_modules", "dist"]
 }
