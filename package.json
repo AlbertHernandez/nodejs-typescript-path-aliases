@@ -1,22 +1,19 @@
 {
-  "name": "ts-playground",
+  "name": "node-typescript-path-aliases",
   "version": "1.0.0",
-  "description": "Skeleton for new typescript libraries",
-  "main": "src/index.js",
+  "description": "A complete example of how to configure TypeScript path aliases in a Node.js project",
+  "main": "dist/main.js",
   "scripts": {
-    "test": "npm run test:unit",
+    "dev": "ts-node-dev --quiet src/main.ts",
+    "test": "NODE_ENV=test jest",
     "test:unit": "NODE_ENV=test jest",
-    "prepare": "husky install",
     "lint": "eslint --ignore-path .gitignore . --ext .js,.ts",
     "lint:fix": "npm run lint -- --fix",
-    "playground": "ts-node-dev --respawn playground",
-    "build": "npm run build:clean && npm run build:tsc",
-    "build:clean": "rimraf dist; exit 0",
-    "build:tsc": "tsc -p tsconfig.prod.json"
+    "build": "rm -rf dist && tsc -p tsconfig.prod.json",
+    "start": "node dist/main.js"
   },
   "repository": {
-    "type": "git",
-    "url": "git+https://github.com/AlbertHernandez/ts-playground.git"
+    "type": "git"
   },
   "keywords": [
     "typescript",
@@ -24,36 +21,27 @@
     "skeleton"
   ],
   "author": "alberthernandezdev@gmail.com",
-  "license": "MIT",
   "engines": {
-    "node": ">=16.0.0",
-    "npm": ">=8.3.0"
+    "node": ">=22.x",
+    "npm": ">=9.x"
   },
-  "bugs": {
-    "url": "https://github.com/AlbertHernandez/ts-playground/issues"
-  },
-  "homepage": "https://github.com/AlbertHernandez/ts-playground#readme",
   "devDependencies": {
-    "@commitlint/cli": "^15.0.0",
-    "@commitlint/config-conventional": "^15.0.0",
-    "@types/jest": "^27.0.3",
-    "@typescript-eslint/eslint-plugin": "^5.7.0",
-    "@typescript-eslint/parser": "^5.7.0",
-    "eslint": "^8.5.0",
-    "eslint-config-prettier": "^8.3.0",
-    "eslint-plugin-prettier": "^4.0.0",
-    "husky": "^7.0.4",
-    "jest": "^27.4.5",
-    "lint-staged": "^12.1.2",
-    "prettier": "^2.5.1",
-    "rimraf": "^3.0.2",
-    "ts-jest": "^27.1.2",
-    "ts-node-dev": "^1.1.8",
-    "typescript": "^4.5.4"
+    "@types/express": "^5.0.3",
+    "@types/jest": "^30.0.0",
+    "@types/supertest": "^6.0.3",
+    "@typescript-eslint/eslint-plugin": "^7.18.0",
+    "@typescript-eslint/parser": "^7.18.0",
+    "eslint": "^8.57.1",
+    "eslint-config-prettier": "^9.1.2",
+    "eslint-plugin-prettier": "^5.5.3",
+    "jest": "^30.0.5",
+    "prettier": "^3.6.2",
+    "supertest": "^7.1.4",
+    "ts-jest": "^29.4.0",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^5.8.3"
   },
-  "lint-staged": {
-    "*.(js|ts)": [
-      "npm run lint:fix"
-    ]
+  "dependencies": {
+    "express": "^5.1.0"
   }
 }
